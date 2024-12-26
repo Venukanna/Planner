@@ -1,0 +1,19 @@
+.header {
+    background-color: #282c34;
+    padding: 20px;
+    color: white;
+    min-width: auto;
+    min-height: min-content;
+
+  }
+  
+  .header nav ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .header nav ul li {
+    display: inline;
+    margin: 0 15px;
+  }
+  

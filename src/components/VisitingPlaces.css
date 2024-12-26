@@ -1,0 +1,17 @@
+.visiting-places {
+    margin: 20px;
+  }
+  
+  .visiting-places h2 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+  }
+  
+  .visiting-places ul {
+    list-style: none;
+  }
+  
+  .visiting-places li {
+    margin: 5px 0;
+  }
+  

@@ -1,0 +1,17 @@
+.top-destinations {
+    margin: 20px;
+  }
+  
+  .top-destinations h2 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+  }
+  
+  .top-destinations ul {
+    list-style: none;
+  }
+  
+  .top-destinations li {
+    margin: 5px 0;
+  }
+  
