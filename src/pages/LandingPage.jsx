@@ -1,164 +1,267 @@
-// import React from 'react';
-// import './LandingPage.css'; // Import page-specific CSS
-// import VisitingPlaces from '../components/VisitingPlaces';
-// import TopDestinations from '../components/TopDestinations';
+
+
+// import React from "react";
+// import "./LandingPage.css";
 
 // const LandingPage = () => {
 //   return (
 //     <div className="landing-page">
-//       <h1>Welcome to Travel Trip Adv</h1>
-//       <VisitingPlaces />
-//       <TopDestinations />
+//       {/* Full-screen hero image */}
+//       <div className="hero">
+//         <img
+//           className="hero-image"
+//           src="https://bitl.to/3WZw"
+//           alt="Travel Adventure"
+//         />
+//         {/* <h1 className="hero-text">Welcome to Travel Trip Adv</h1> */}
+        
+//       </div>
 
-//       <img 
-//         src="https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcT9NtT3-XFSznmETzmMQA1nn5ADOawf0VD63yNsUgbrLVQeX4nwzyOKW0sXBVU6_EDRwLTHWNKd_1E4Os8Hb0kveREzhkOnY96ob_sRJw" // Replace with your image URL
-//         alt="Landing Page"
-//         className="landing-page-image"
-//       />
+//       {/* Small boxes with images */}
+//       <div className="small-boxes">
+//         <div className="box">
+//           <img
+//             src="https://bitl.to/3WZn"
+//             alt="Hotels"
+//             className="box-image"
+//           />
+//           <p>Hotels</p>
+//           <p className="price">$150 / night</p>
+//         </div>
+//         <div className="box">
+//           <img
+//             src="https://bitl.to/3Xey"
+//             alt="Apartments"
+//             className="box-image"
+//           />
+//           <p>Apartments</p>
+//           <p className="price">$160 / night</p>
+//         </div>
+//         <div className="box">
+//           <img
+//             src="https://bitl.to/3Xev"
+//             alt="Resorts"
+//             className="box-image"
+//           />
+//           <p>Resorts</p>
+//           <p className="price">$250 / night</p>
+//         </div>
+//         <div className="box">
+//           <img
+//             src="https://bitl.to/3Xf3"
+//             alt="Villas"
+//             className="box-image"
+//           />
+//           <p>Villas</p>
+//           <p className="price">$350 / night</p>
+//         </div>
+//         <div className="box">
+//           <img
+//             src="https://bitl.to/3Xf2"
+//             alt="Hostels"
+//             className="box-image"
+//           />
+//           <p>Hostels</p>
+//           <p className="price">$120 / night</p>
+//         </div>
+//         <div className="box">
+//           <img
+//             src="https://cupliv.com/images/bangalore/settl-tellaro/1.jpg"
+//             alt="Co-Live PGs"
+//             className="box-image"
+//           />
+//           <p>Co-Live PGs</p>
+//         </div>
+//       </div>
 //     </div>
-    
-
 //   );
 // };
 
 // export default LandingPage;
 
-// import React from 'react';
-// import './LandingPage.css';
+
+// import React, { useState } from "react";
+// import "./LandingPage.css";
 
 // const LandingPage = () => {
+//   const images = [
+//     { src: "https://bitl.to/3WZn", alt: "Hotels", price: "$150 / night" },
+//     { src: "https://bitl.to/3WZn", alt: "Hotels", price: "$150 / night" },
+//     { src: "https://bitl.to/3Xey", alt: "Apartments", price: "$160 / night" },
+//     { src: "https://bitl.to/3Xev", alt: "Resorts", price: "$250 / night" },
+//     { src: "https://bitl.to/3Xf3", alt: "Villas", price: "$350 / night" },
+//     { src: "https://bitl.to/3Xf2", alt: "Hostels", price: "$120 / night" },
+//     { src: "https://cupliv.com/images/bangalore/settl-tellaro/1.jpg", alt: "Co-Live PGs", price: "" }
+    
+//   ];
+
+//   const [currentIndex, setCurrentIndex] = useState(0);
+
+//   const handlePrev = () => {
+//     setCurrentIndex((prevIndex) =>
+//       prevIndex === 0 ? images.length - 5 : prevIndex - 1
+//     );
+//   };
+
+//   const handleNext = () => {
+//     setCurrentIndex((prevIndex) =>
+//       prevIndex === images.length - 5 ? 0 : prevIndex + 1
+//     );
+//   };
+
 //   return (
-//     <div className="landing-page-container">
-//       <h1>Welcome to Our Travel Platform</h1>
-//       <p>Your one-stop destination for all your travel needs.</p>
-//       <button className="cta-button">Explore Now</button>
+//     <div className="landing-page">
+//       {/* Full-screen hero image */}
+//       <div className="hero">
+//         <img
+//           className="hero-image"
+//           src="https://bitl.to/3WZw"
+//           alt="Travel Adventure"
+//         />
+//       </div>
+
+//       {/* Small boxes with images */}
+//       <div className="carousel">
+//         <button className="arrow left" onClick={handlePrev}>
+//           &#10094; {/* Left Arrow */}
+//         </button>
+//         <div className="small-boxes">
+//           {images.slice(currentIndex, currentIndex + 5).map((image, index) => (
+//             <div key={index} className="box">
+//               <img
+//                 src={image.src}
+//                 alt={image.alt}
+//                 className="box-image"
+//               />
+//               <p>{image.alt}</p>
+//               {image.price && <p className="price">{image.price}</p>}
+//             </div>
+//           ))}
+//         </div>
+//         <button className="arrow right" onClick={handleNext}>
+//           &#10095; {/* Right Arrow */}
+//         </button>
+//       </div>
 //     </div>
-  
 //   );
 // };
 
 // export default LandingPage;
 
-import React from 'react';
-import './LandingPage.css'; // Import page-specific CSS
+
+
+import React, { useState } from "react";
+import "./LandingPage.css";
 
 const LandingPage = () => {
+  const firstRowImages = [
+    { src: "https://bitl.to/3WZn", alt: "Hotels", price: "$150 / night" },
+    { src: "https://bitl.to/3Xey", alt: "Apartments", price: "$160 / night" },
+    { src: "https://bitl.to/3Xev", alt: "Resorts", price: "$250 / night" },
+    { src: "https://bitl.to/3Xf3", alt: "Villas", price: "$350 / night" },
+    { src: "https://bitl.to/3Xf2", alt: "Hostels", price: "$120 / night" },
+  ];
+
+  const secondRowImages = [
+    { src: "https://bitl.to/3Xey", alt: "Beaches", price: "$180 / night" },
+    { src: "https://bitl.to/3Xev", alt: "Mountains", price: "$200 / night" },
+    { src: "https://bitl.to/3Xf3", alt: "City Hotels", price: "$300 / night" },
+    { src: "https://bitl.to/3Xf2", alt: "Jungle Lodges", price: "$400 / night" },
+    { src: "https://cupliv.com/images/bangalore/settl-tellaro/1.jpg", alt: "Desert Camps", price: "$220 / night" },
+  ];
+
+  
+
+  const [firstRowIndex, setFirstRowIndex] = useState(0);
+  const [secondRowIndex, setSecondRowIndex] = useState(0);
+  
+
+  const handleFirstRowPrev = () => {
+    setFirstRowIndex((prevIndex) =>
+      prevIndex === 0 ? firstRowImages.length - 5 : prevIndex - 1
+    );
+  };
+
+  const handleFirstRowNext = () => {
+    setFirstRowIndex((prevIndex) =>
+      prevIndex === firstRowImages.length - 5 ? 0 : prevIndex + 1
+    );
+  };
+
+  const handleSecondRowPrev = () => {
+    setSecondRowIndex((prevIndex) =>
+      prevIndex === 0 ? secondRowImages.length - 5 : prevIndex - 1
+    );
+  };
+
+  const handleSecondRowNext = () => {
+    setSecondRowIndex((prevIndex) =>
+      prevIndex === secondRowImages.length - 5 ? 0 : prevIndex + 1
+    );
+  };
+
   return (
     <div className="landing-page">
-      <h1>Welcome to Travel Trip Adv</h1>
-
-      {/* Property Types Section */}
-      <section className="property-types">
-        <h2>Browse by property type in Hyderabad</h2>
-        <div className="property-types-container">
-          <div className="property-type">
-            <img 
-              src="https://images.pexels.com/photos/96444/pexels-photo-96444.jpeg?auto=compress&cs=tinysrgb&w=600" // Replace with actual image URL
-              alt="Hotels"
-            />
-            <h3>Hotels</h3>
-            <p>27 Dec-29 Dec, 2 adults</p>
-            <p>516 available</p>
-          </div>
-          <div className="property-type">
-            <img 
-              src="https://via.placeholder.com/300" // Replace with actual image URL
-              alt="Apartments"
-            />
-            <h3>Apartments</h3>
-            <p>27 Dec-29 Dec, 2 adults</p>
-            <p>62 available</p>
-          </div>
-          <div className="property-type">
-            <img 
-              src="https://via.placeholder.com/300" 
-              alt="Resorts"
-            />
-            <h3>Resorts</h3>
-            <p>27 Dec-29 Dec, 2 adults</p>
-            <p>5 available</p>
-          </div>
-          <div className="property-type">
-            <img 
-              src="https://via.placeholder.com/300" 
-              alt="Villas"
-            />
-            <h3>Villas</h3>
-            <p>27 Dec-29 Dec, 2 adults</p>
-            <p>12 available</p>
-          </div>
-          <div className="property-type">
-            <img 
-              src="https://media.istockphoto.com/id/1807514677/photo/talking-to-my-new-roommate.jpg?s=2048x2048&w=is&k=20&c=jvPLicZVavBulMVQ8p91BhjKnhSf86OT4W_WKPcmYC0=" 
-              alt="Villas"
-            />
-            <h3>co-live pgs</h3>
-            <p>27 Dec-29 Dec, 2 adults</p>
-            <p>12 available</p>
-          </div>
-          <div className="property-type">
-            <img 
-              src="https://media.istockphoto.com/id/182498079/photo/youth-hostel-dorm-room.webp?a=1&b=1&s=612x612&w=0&k=20&c=aYJY3SpwM_vjUg5fmtsh5O0niMbTEeEgrJYOVE50edM=" 
-              alt="Villas"
-            />
-            <h3>Hostels</h3>
-            <p>27 Dec-29 Dec, 2 adults</p>
-            <p>12 available</p>
-          </div>
-          
+      {/* Full-screen hero image */}
+      <div className="hero">
+        <img
+          className="hero-image"
+          src="https://images.pexels.com/photos/3422964/pexels-photo-3422964.jpeg?auto=compress&cs=tinysrgb&w=600"
+          alt="Travel Adventure"
+        />
+         <div className="hero-text">
+        <h1>Explore The World</h1>
+         <p className="subtitle">50% discount on your first adventure</p>
+         <p className="description">
+         "Discover unforgettable destinations and adventures – Your dream journey starts here!"
+         </p>
+         <div className="hero-buttons">
+          <button className="btn primary">Get Started</button>
+          <button className="btn secondary">Learn More</button>
+         </div>
         </div>
-      </section>
+        
+      </div>
 
-      {/* Trending Destinations Section */}
-      <section className="trending-destinations">
-        <h2>Trending destinations</h2>
-        <p>Travellers searching for India also booked these</p>
-        <div className="destinations-container">
-          <div className="destination">
-            <img 
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpxMti9jW6gS4o_TSuq6gRFxQ02FOTHf2bAQ&s" 
-            />
-            <h3>Hyderabad</h3>
-          </div>
-          <div className="property-type">
-            <img 
-              src="https://via.placeholder.com/300" 
-              alt="Villas"
-            />
-            <h3>Villas</h3>
-            <p>27 Dec-29 Dec, 2 adults</p>
-            <p>12 available</p>
-          </div>
-          <div className="destination">
-            <img 
-              src="https://via.placeholder.com/300" 
-              alt="Mumbai"
-            />
-            <h3>Mumbai</h3>
-          </div>
-          <div className="destination">
-            <img 
-              src="https://via.placeholder.com/300" 
-              alt="Bangalore"
-            />
-            <h3>Bangalore</h3>
-          </div>
-          <div className="destination">
-            <img 
-              src="https://via.placeholder.com/300" 
-              alt="New Delhi"
-            />
-            <h3>New Delhi</h3>
-          </div>
-          <div className="destination">
-            <img 
-              src="https://via.placeholder.com/300" // Replace with actual image URL
-              alt="Chennai"
-            />
-            <h3>Chennai</h3>
-          </div>
+      {/* First row */}
+      <h1 className="section-title">Top Picked Places</h1>
+      <div className="carousel">
+        <button className="arrow left" onClick={handleFirstRowPrev}>
+          &#10094;
+        </button>
+        <div className="small-boxes">
+          {firstRowImages.slice(firstRowIndex, firstRowIndex + 5).map((image, index) => (
+            <div key={index} className="box">
+              <img src={image.src} alt={image.alt} className="box-image" />
+              <p>{image.alt}</p>
+              {image.price && <p className="price">{image.price}</p>}
+            </div>
+          ))}
         </div>
-      </section>
+        <button className="arrow right" onClick={handleFirstRowNext}>
+          &#10095;
+        </button>
+      </div>
+
+      {/* Second row */}
+      <h2 className="section-title">gallery</h2>
+      <div className="carousel">
+        <button className="arrow left" onClick={handleSecondRowPrev}>
+          &#10094;
+        </button>
+        <div className="small-boxes">
+          {secondRowImages.slice(secondRowIndex, secondRowIndex + 5).map((image, index) => (
+            <div key={index} className="box">
+              <img src={image.src} alt={image.alt} className="box-image" />
+              <p>{image.alt}</p>
+              {image.price && <p className="price">{image.price}</p>}
+            </div>
+          ))}
+        </div>
+        <button className="arrow right" onClick={handleSecondRowNext}>
+          &#10095;
+        </button>
+      </div>
     </div>
   );
 };

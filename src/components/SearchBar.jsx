@@ -1,12 +1,14 @@
+// src/components/SearchBar.jsx
 import React from 'react';
-import './SearchBar.css'; // Import the component-specific CSS
-
+import './SearchBar.css';
 
 const SearchBar = () => {
   return (
-    <div className="search-bar">
-      <input type="text" placeholder="Search for a destination..." />
-    </div>
+    <input
+      type="text"
+      className="search-bar"
+      placeholder="Search your destination"
+    />
   );
 };
 

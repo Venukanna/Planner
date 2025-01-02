@@ -1,4 +1,4 @@
-.footer {
+/* .footer {
     background-color: #282c34;
     padding: 20px;
     
@@ -7,4 +7,26 @@
     padding: 10px;
     text-align: center;
   }
-  
+   */
+
+
+   /* Apply to the whole page */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensures the body takes up the full screen height */
+  margin: 0; /* Remove default margin */
+}
+
+/* Main content area */
+main {
+  flex: 1; /* Makes the main content take up the remaining space */
+}
+
+/* Footer styling */
+footer {
+  background-color: #333; /* Example background color */
+  color: white; /* Example text color */
+  text-align: center;
+  padding: 10px; /* Example padding */
+}

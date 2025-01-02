@@ -1,0 +1,55 @@
+.train-booking-container {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  max-width: 600px;
+  margin: 20px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.train-booking-title {
+  font-size: 24px;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.train-booking-description {
+  font-size: 16px;
+  color: #555;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.train-booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.train-booking-form label {
+  font-size: 14px;
+  color: #333;
+}
+
+.train-booking-form input {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.train-booking-button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.train-booking-button:hover {
+  background-color: #0056b3;
+}
